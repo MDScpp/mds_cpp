@@ -22,7 +22,7 @@ FPGA and c++ programmer and an electronic engineer.
 developed a highly specialized jit compiled functional language based on LLVM backend
 - (2017 – 2019) “Конвед-6 ЛИИ” (same) FPGA and c++ programmer.
 - graduated from MEPhI (elementary particle physics) and RTU MIREA ( industrial informatics)
-- Now MSc Scoltech stutent (Life Sciences) 
+
 
 ---
 
