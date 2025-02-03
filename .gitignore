@@ -1,0 +1,10 @@
+*.exe
+*.o
+animation.py
+
+*\cmake*
+
+*.idea*
+out
+
+*\.vscode
