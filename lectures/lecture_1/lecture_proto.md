@@ -265,6 +265,8 @@ typedef unsigned int uint32_t;
 
 ![bg right:60% 90%](images/unknown_.drawio.png)
 
+---
+
 # First look at C++ classes
 
 <table>

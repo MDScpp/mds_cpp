@@ -44,19 +44,14 @@ def process_file(main_filename,out_filename):
         return f"<table><tr> {headers} </tr><tr>  {contents} </tr></table>"
     
 
-    
     content = table_pattern.sub(table_replacer, content)
 
-    
-    
     content = table_pattern_hless.sub(lambda x:table_replacer(x,True), content)
 
     with open(out_filename, 'w', encoding='utf-8') as f:
         f.write(content)
     
     print(f"File {out_filename} updated.")
-
-
 
 
 
