@@ -2,7 +2,7 @@
 *.o
 animation.py
 
-*\cmake*
+*\cmake-
 
 *.idea*
 out
