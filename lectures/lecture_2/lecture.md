@@ -1,11 +1,11 @@
 ---
-marp: false
+marp: true
 auto-scaling: true
 style: |
   .hidden  {
     opacity: 0.0;
   }
-
+  
 ---
 
 # Лекция 2. Функции   
