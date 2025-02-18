@@ -52,14 +52,11 @@ Matrix e = Matrix(5,5, 4.) * Matrix(5,5, 4.);
 throw std::invalid_argument("the matrices being summed have incompatible shapes.");
 ```
 
-если не может быть выделено достаточно памяти ловите исключение std::bad_alloc вместе с std::invalid_argument
+Если не может быть выделено достаточно памяти ловите исключение std::bad_alloc вместе с std::invalid_argument
 ```cpp 
 try{
-    Slave c = sl * Slave(5);
-    std::cout << std::endl;
-    std::cout << c << sl << std::endl;
+    Matrix c = m * Matrix(5,5, 4.);
 }catch (const std::exception& e){
-
     std::cout << "Error: " << e.what() << '\n';
 }
 ```
