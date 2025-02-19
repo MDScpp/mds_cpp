@@ -118,8 +118,9 @@ class Owner {
 };
 
 Owner makeOwner(){
+    Owner o ;
     std::cout<< "makeOwner\n";
-    return Owner();
+    return o;
 }
 
 Slave makeSlave(){
