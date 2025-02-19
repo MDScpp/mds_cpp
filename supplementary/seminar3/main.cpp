@@ -62,7 +62,8 @@ class Slave {
         if (&arg == this)
             return *this;
         
-         p_ = new(std::nothrow) int [arg.size_];
+        delete[] p_;    
+        p_ = new(std::nothrow) int [arg.size_];
         // the same: this->p_ = new(std::nothrow) int [arg.size_];
         if (p_==nullptr){ 
             std::cout<< "bed alloc "<<std::endl;
@@ -78,6 +79,7 @@ class Slave {
 
     Slave & operator=(Slave && arg) noexcept {
         std::cout<< "move slave assignment"<<std::endl;
+        delete[] p_;
         p_ = arg.p_;
         size_ =  arg.size_;
         arg.size_ = 0;
