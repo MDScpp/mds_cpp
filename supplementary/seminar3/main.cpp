@@ -61,8 +61,14 @@ class Slave {
         std::cout<< "copy assignment "<<std::endl;
         if (&arg == this)
             return *this;
-        
+
+        // remember to release your own dynamic resources
+        // however you can implement more sophisticated logic 
+        // to avoid memory allocation and removing, if sizes are equal.
+        // but this only makes sense for copying.
+
         delete[] p_;    
+
         p_ = new(std::nothrow) int [arg.size_];
         // the same: this->p_ = new(std::nothrow) int [arg.size_];
         if (p_==nullptr){ 
@@ -80,13 +86,14 @@ class Slave {
     Slave & operator=(Slave && arg) noexcept {
         // is used for : 
         // Slave a(10) ; 
-        // a = Slave();  <- for this 
-        // it is also posiible to have : 
-        // a = a; 
-
-
+        // a = Slave(10);  <- for this 
         std::cout<< "move slave assignment"<<std::endl;
+
+        // do not forget to free your ouwn dynamic recources
+        // or you can excange recources 
         delete[] p_;
+
+
         p_ = arg.p_;
         size_ =  arg.size_;
         arg.size_ = 0;
@@ -153,7 +160,8 @@ int main(){
 
     Slave c = makeSlave();
 
-    Slave a = c;
+    Slave a ;
+    a = Slave(10);
 
     std::cin.get();
     return 0; 
