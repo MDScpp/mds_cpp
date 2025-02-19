@@ -78,6 +78,13 @@ class Slave {
 
 
     Slave & operator=(Slave && arg) noexcept {
+        // is used for : 
+        // Slave a(10) ; 
+        // a = Slave();  <- for this 
+        // it is also posiible to have : 
+        // a = a; 
+
+
         std::cout<< "move slave assignment"<<std::endl;
         delete[] p_;
         p_ = arg.p_;
