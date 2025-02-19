@@ -14,7 +14,7 @@ class Slave {
 
     explicit Slave (size_t size)  {
         std::cout<< "make size slave "<<std::endl;
-        p_ = new int [size];
+        p_ = new(std::nothrow) int [size];
         if (p_==nullptr) std::cout<< "bed alloc"<<std::endl;
         else size_ = size;
     }
@@ -32,7 +32,7 @@ class Slave {
         size_ =  arg.size_;
         for(size_t i=0; i< arg.size_; i++)
             p_[i] = arg.p_[i];
-            // *(p_+i) = *(arg.p_+i)
+            // *(p_+i) = *(arg.p_+i) // the same 
     }
 
     Slave (Slave && arg)  noexcept {
