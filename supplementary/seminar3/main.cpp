@@ -93,7 +93,6 @@ class Slave {
         // or you can excange recources 
         delete[] p_;
 
-
         p_ = arg.p_;
         size_ =  arg.size_;
         arg.size_ = 0;
