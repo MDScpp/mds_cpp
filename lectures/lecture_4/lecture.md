@@ -497,14 +497,21 @@ class Cat : public Animal {
 
 # Статические Функции-члены класса  
 
+- Принадлежат классу, а не объекту.
+- Не имеют доступа к нестатическим членам (без передачи объекта).
+- Вызываются через класс (ClassName::method()), но могут вызываться и через объект.
+
 ```cpp 
 class MyClass {
 public:
-  static void doSomething() const; 
-private:
-  int * ptr_ = nullptr;
+  static void doSomething() ; 
 };
-void MyClass::print() const {
-    std::cout << "Ptr value "<< ptr_ << std::endl;
+void MyClass::doSomething() {
 }
+
+int main(){
+  MyClass::doSomething();
+  return 0;
+}
+
 ```
