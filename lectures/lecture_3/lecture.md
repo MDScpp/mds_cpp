@@ -84,7 +84,7 @@ class FooDefault {
 
 ---
 
-# implicitly defined constructor and destructor
+# Implicitly defined constructor and destructor
 
 ```cpp
 class Foo {
@@ -103,7 +103,7 @@ class Foo {
 
 ```
 ---
-# оператор sizeof 
+# Оператор sizeof 
 
 - Запрашивает размер объекта или типа.
 - Используется, когда необходимо знать фактический размер объекта.

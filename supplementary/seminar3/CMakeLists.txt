@@ -9,4 +9,4 @@ if (CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
     add_compile_options(-fno-elide-constructors)
 endif()
 
-add_executable(my_program main.cpp)
+add_executable(my_program main.cpp BmpSaver.cpp)
