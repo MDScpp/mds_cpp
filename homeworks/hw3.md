@@ -74,4 +74,6 @@ struct  FullHeader {
 
 ```
 
-Проверьте размер 
+Проверьте размер структуры на этапе компиляции с помощью static_assert.
+должно быть: sizeof(BitmapInfoHeader) == 40 , sizeof(BitmapFileHeader) == 14, sizeof(FullHeader) == 54  .
+Чтобы записать структуру воспользуйтесь приведением типа указателя на структуру.
