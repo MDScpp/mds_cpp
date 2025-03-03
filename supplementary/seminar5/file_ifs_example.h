@@ -28,14 +28,14 @@ inline void writeToFile<std::string>(ir_ostream &os, const std::string &str) {
 
 
 
-template <class Mod, class... Mods>
+template <typename Mod, typename... Mods>
 void write(ir_ostream &os, const Mod &M, const Mods &...Ms) {
     writeToFile(os, M);
     //std::cout<<"val: "<< M << "\n";
     write(os,Ms...);
 }
 
-template <class Mod>
+template <typename Mod>
 void write(ir_ostream &os, const Mod &M){
     writeToFile(os, M);
     //std::cout<<"val: "<< M << "\n";
@@ -61,14 +61,14 @@ inline void readFromFile<std::string>(ir_istream &os, std::string &str) {
 
 
 
-template <class Mod, class... Mods>
+template <typename Mod, typename... Mods>
 void read(ir_istream &os, Mod &M,  Mods &...Ms) {
     readFromFile(os, M);
     //std::cout<<"val: "<< M << "\n";
     read(os, Ms...);
 }
 
-template <class Mod>
+template <typename Mod>
 inline void read(ir_istream &os,  Mod &M){
     readFromFile(os, M);
     //std::cout<<"val: "<< M << "\n";

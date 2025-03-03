@@ -6,8 +6,6 @@
 
 // const char * 
 int main(int argc, char **argv) {
-
-
     {
         struct {
             double d = 0.35;
