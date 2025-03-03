@@ -7,5 +7,7 @@ animation.py
 *.idea*
 out
 
+a.out
+
 *\.vscode
 run.bat
