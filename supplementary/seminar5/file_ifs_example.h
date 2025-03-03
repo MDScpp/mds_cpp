@@ -26,7 +26,11 @@ inline void writeToFile<std::string>(ir_ostream &os, const std::string &str) {
     os.write(str.data(), std::streamsize(str.length()));
 };
 
-
+template <typename Mod>
+void write(ir_ostream &os, const Mod &M){
+    writeToFile(os, M);
+    //std::cout<<"val: "<< M << "\n";
+}
 
 template <typename Mod, typename... Mods>
 void write(ir_ostream &os, const Mod &M, const Mods &...Ms) {
@@ -35,11 +39,7 @@ void write(ir_ostream &os, const Mod &M, const Mods &...Ms) {
     write(os,Ms...);
 }
 
-template <typename Mod>
-void write(ir_ostream &os, const Mod &M){
-    writeToFile(os, M);
-    //std::cout<<"val: "<< M << "\n";
-}
+
 
 /*
  * reading from file interface
@@ -60,6 +60,11 @@ inline void readFromFile<std::string>(ir_istream &os, std::string &str) {
 };
 
 
+template <typename Mod>
+inline void read(ir_istream &os,  Mod &M){
+    readFromFile(os, M);
+    //std::cout<<"val: "<< M << "\n";
+}
 
 template <typename Mod, typename... Mods>
 void read(ir_istream &os, Mod &M,  Mods &...Ms) {
@@ -68,11 +73,7 @@ void read(ir_istream &os, Mod &M,  Mods &...Ms) {
     read(os, Ms...);
 }
 
-template <typename Mod>
-inline void read(ir_istream &os,  Mod &M){
-    readFromFile(os, M);
-    //std::cout<<"val: "<< M << "\n";
-}
+
 };
 
 
