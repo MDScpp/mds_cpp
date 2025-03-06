@@ -1,31 +1,45 @@
 #ifndef TOY_LANG_PARSER
 #define TOY_LANG_PARSER
 
-#include <istream>
-#include <optional>
-#include <variant>
+#include <memory>
+#include <string>
+#include <vector>
 
-class ASTNode {
+class NodeAST {
 public:
-  virtual ~ASTNode() = default;
-  //virtual void accept(class Visitor &visitor) = 0;
+  virtual ~NodeAST() = default;
+  virtual void accept(class Visitor &visitor) = 0;
 };
 
 
-class Expr : public ASTNode { /*...*/
+
+class ExprAST : public NodeAST { 
+  /*...*/
+  public:
+  void accept(Visitor &visitor) override;
 };
 
-class Statement : public ASTNode { /*...*/
+class StatementAST : public NodeAST { 
+  /*...*/
+  public:
+  void accept(Visitor &visitor) override;
 };
 
+
+class FunctionDefAST : public NodeAST {
+  std::string name;
+  std::vector<std::string> params;
+  std::vector<std::unique_ptr<StatementAST>> body;
+  std::unique_ptr<ExprAST> return_expr;
+public:
+  void accept(Visitor &visitor) override;
+};
 
 /*
-
+other classes
 ....
 
 */
-
-
 
 class Parser {
   // переменные
