@@ -4,7 +4,7 @@
 
 #include <iostream>
 #include <string>
-
+#include <cstdint>
 namespace ir {
 using ir_ostream = std::ostream;
 using ir_istream = std::istream;
