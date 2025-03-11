@@ -24,4 +24,4 @@ cmake ../   -DCMAKE_CXX_COMPILER=clang++
 cmake ../  -G ninja -DCMAKE_BUILD_TYPE=Debug
 
 
-cmake --buid .
+cmake --build .

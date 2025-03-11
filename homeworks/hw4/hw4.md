@@ -1,0 +1,1 @@
+Вам нужно будет дописать класс FixedCapacityVector
