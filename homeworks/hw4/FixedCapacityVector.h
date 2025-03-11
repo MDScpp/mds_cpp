@@ -34,11 +34,9 @@ public:
         while(size_) pop_back();
     }
 
-    std::size_t capacity(){
-        // ваш код //
-    }
+    std::size_t capacity() const { /* ваш код */ }
 
-    size_t size( ) const { /* ваш код */ }
+    std::size_t size( ) const { /* ваш код */ }
 
     void push_back(const  T & arg) {
         if (/* ваш код */) {
