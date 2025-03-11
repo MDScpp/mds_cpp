@@ -1,1 +1,1 @@
-Вам нужно будет дописать класс FixedCapacityVector
+Вам нужно будет дописать класс FixedCapacityVector и использовать (placement new)

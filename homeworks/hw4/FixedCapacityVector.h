@@ -1,9 +1,11 @@
 #include <iostream>
-#include <new> // Для placement new
-#include <utility> // Для std::move
+#include <utility> 
 
 
 // https://en.cppreference.com/w/cpp/language/new  (см. раздел с placement new)
+
+
+
 
 /* ваш код  (тут буквально одна строка)*/ 
 class FixedCapacityVector {
@@ -16,8 +18,8 @@ private:
     std::size_t size_ = 0;; 
 
     
-    T* getPtr(std::size_t index) {
-        // ваш код вспомогательная функция (вам нужно привести тип)
+    /* ваш код */getPtr(std::size_t index) {
+        // ваш код    вспомогательной функции (вам нужно привести тип)
     }
 
 
@@ -51,7 +53,7 @@ public:
     }
 
 
-    T& get(std::size_t index) {
+    /* ваш код */get(std::size_t index) {
         if (/* ваш код */ ) {
             throw std::out_of_range("Invalid index ");
         }
