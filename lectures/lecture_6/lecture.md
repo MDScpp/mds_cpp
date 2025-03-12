@@ -1,5 +1,5 @@
 ---
-marp: true
+marp: false
 auto-scaling: true
 
 theme: enable-all-auto-scaling
@@ -110,7 +110,7 @@ int main(){
 - Удаляет объект только, когда последний из ссылающихся shared_ptr’ов удаляется или принимает указатель на другой объект
 
 
-![bg right:50% 90%]({558583CF-970A-4E7F-8CB1-DB2B51D9123E}.png)
+![bg right:50% 90%](images/{558583CF-970A-4E7F-8CB1-DB2B51D9123E}.png)
 
 
 ---
@@ -230,23 +230,19 @@ int main(){
 
 ---
 
-
-
----
-
 # Контейнеры последовательностей https://hackingcpp.com/cpp/std/library.html
 
-- `array<T,size>` ![height:50px](image.png)
+- `array<T,size>` ![height:50px](images/image.png)
 
-- `vector<T>` ![height:50px](image-1.png)
+- `vector<T>` ![height:50px](images/image-1.png)
 
-- `deque<T>` ![height:50px](image-2.png) (вообще говоря, эта картинка не самая удачная)
+- `deque<T>` ![height:50px](images/image-2.png) (вообще говоря, эта картинка не самая удачная)
 
-- `list<T>` ![height:50px](image-3.png)
+- `list<T>` ![height:50px](images/image-3.png)
 
-- `forward_list<T>` ![height:50px](image-4.png)
+- `forward_list<T>` ![height:50px](images/image-4.png)
 
-- `string` ![height:50px](image-4.png)
+- `string` ![height:50px](images/image-4.png)
 
 
 
@@ -283,7 +279,7 @@ int main(){
 
 # Инвалидация итератора
 
-![alt text]({CE23416C-C70B-4EAD-A6FA-7452540D5682}.png)
+![alt text](images/{CE23416C-C70B-4EAD-A6FA-7452540D5682}.png)
 
 
 
@@ -296,7 +292,7 @@ int main(){
 <tr></tr>
 <tr><td>
 
-![height:90px](image-5.png)
+![height:90px](images/image-5.png)
 
 </td><td>
 
@@ -307,7 +303,7 @@ int main(){
 
 <tr><td>
 
-![height:90px](image-6.png)
+![height:90px](images/image-6.png)
 </td><td>
 
 `map<Key,Value>` хранит уникальные пары ключ+значение; сортируется по ключам.
@@ -316,7 +312,7 @@ int main(){
 
 <tr><td>
 
-![height:90px](image-7.png)
+![height:90px](images/image-7.png)
 </td><td>
 
 `unordered_set<Key>` хранит уникальные ключи; хэшируется по ключам
@@ -326,7 +322,7 @@ int main(){
 
 <tr><td>
 
-![height:90px](image-8.png) 
+![height:90px](images/image-8.png) 
 </td><td>
 
 `unordered_map<Key,Value>` хранит уникальные пары ключ+значение; хэшируется по ключам
@@ -375,6 +371,4 @@ if (it != myMap.end()) {
 ```
 
 
---- 
 
-# Возврат нескольких значений 
