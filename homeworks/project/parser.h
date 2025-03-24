@@ -8,7 +8,7 @@
 class NodeAST {
 public:
   virtual ~NodeAST() = default;
-  virtual void accept(class Visitor &visitor) = 0;
+  virtual void accept(Visitor &visitor) = 0;
 };
 
 

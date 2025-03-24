@@ -59,15 +59,18 @@ def pow(base, exp)
 
 
 Переменные можно объявлять только в функциях.
+
+
 У вас должен быть класс Interpreter который позволяет вызывать ваши функции.
 
+```cpp
 class Interpreter {
-    Interpreter(std::istream & )
 public:
+    Interpreter(std::istream & )
     int run(const std::string& function_name, std::vector<int> args);
 };
 
-
+```
 
 
 Как с этим ~~жить~~ работать? 
